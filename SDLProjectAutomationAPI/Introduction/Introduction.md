@@ -1,17 +1,14 @@
-SDL-Community
-=============
-
-This repository will contain the source code for applications and plugins developed and published under SDL Community.
-
-## Word Cloud
-* [Documentation](Word Cloud)
-
-## Controlled Machine Translation Providers
-* [Documentation](Controlled Machine Translation Providers)
-
-## Number verifier
-* [Documentation](Number Verifier)
-
-## TM Optimizer
-* [Documentation](TM Optimizer)
-
+ public static class List_clsErrorDescription
+    {
+        public static string ListToString(this IList<clsErrorDescription> obj)
+        {
+            string a_Res = "";
+            foreach (clsErrorDescription a_Err in obj)
+            {
+                if (a_Res != "")
+                    a_Res += ", ";
+                a_Res += a_Err.Description;
+            }
+            return a_Res;
+        }
+    }
