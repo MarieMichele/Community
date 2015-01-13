@@ -1,3 +1,4 @@
+ ```
  public static class List_clsErrorDescription
     {
         public static string ListToString(this IList<clsErrorDescription> obj)
@@ -12,3 +13,4 @@
             return a_Res;
         }
     }
+```
