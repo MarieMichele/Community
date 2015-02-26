@@ -1,4 +1,4 @@
-Just a sample contribution for testing
+Just a sample contribution for testing. Change during demo.
 
 ```csharp
 public override SearchResults[] SearchTranslationUnitsMasked(SearchSettings settings, TranslationUnit[] translationUnits, bool[] mask)
