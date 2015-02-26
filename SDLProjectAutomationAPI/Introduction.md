@@ -1,15 +1,10 @@
-```cs
-IExtensionPoint extensionPoint = PluginManager.DefaultPluginRegistry.GetExtensionPoint<FileTypeComponentBuilderAttribute>();
-foreach (IExtension extension in extensionPoint.Extensions)
+Just a sample contribution for testing
+
+```csharp
+public override SearchResults[] SearchTranslationUnitsMasked(SearchSettings settings, TranslationUnit[] translationUnits, bool[] mask)
 {
-    IFileTypeComponentBuilder extensionFileTypeComponentBuilder = (IFileTypeComponentBuilder) extension.CreateInstance();
-    extensionFileTypeComponentBuilder.FileTypeManager = fileTypeManager;
-    IFileTypeInformation extensionFileTypeInformation = extensionFileTypeComponentBuilder.BuildFileTypeInformation(string.Empty);
-    string extensionFileTypeDefinitionId = extensionFileTypeInformation.FileTypeDefinitionId.Id;
-     FileTypeComponentBuilderAttribute attr = extension.ExtensionAttribute as FileTypeComponentBuilderAttribute;
-    if (Equals(extensionFileTypeDefinitionId, "XML v 1.2.0.0") && attr.IsTemplate)
-    {
-        //Do something with the file type component builder
-    }
+  var results = base.SearchTranslationUnitsMasked(settings, translationUnits, mask);
+  //iterate thru results and take the translation units which have context now
+  return results;
 }
 ```
