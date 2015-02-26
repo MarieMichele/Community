@@ -1,4 +1,4 @@
-```csharp
+```cs
 IExtensionPoint extensionPoint = PluginManager.DefaultPluginRegistry.GetExtensionPoint<FileTypeComponentBuilderAttribute>();
 foreach (IExtension extension in extensionPoint.Extensions)
 {
